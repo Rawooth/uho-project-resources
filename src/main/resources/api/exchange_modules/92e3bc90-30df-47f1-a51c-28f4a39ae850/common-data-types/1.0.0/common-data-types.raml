@@ -1,0 +1,42 @@
+#%RAML 1.0 Library
+usage: used for common data accross all domains
+
+#
+# To be updated, retailItems & retailItems are listed here for testing purposes only.
+#
+
+types:
+  fieldValidationType:
+    type: object
+    properties:
+      field:
+        type: string
+        description: Input field that is missing or non-complaint to the specification.
+        required: true
+      descriptor:
+        type: string
+        description: Provides the details of validation error
+  errotype:
+    type: object
+    properties:
+      code: 
+        type: integer
+        required: true
+      message:
+        type: string
+        required: true
+      description:
+        type: string
+        required: false  
+      validationErrors:
+        type: fieldValidationType[]
+        required: false
+      dateTime:
+        type: datetime
+        required: true
+      transactionId: 
+        type: string
+        required: false
+      additionalDocumentationURL:
+        type: string
+        required: false

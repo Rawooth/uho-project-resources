@@ -1,0 +1,10 @@
+http:
+  port: "8091"
+
+database:
+  uhub:
+    host: "localhost"
+    port: "1521"
+    user: "c##dummy"
+    password: "dummy"
+    instance: "orcl"
